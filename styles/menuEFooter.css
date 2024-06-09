@@ -42,7 +42,7 @@ header {
 
 .navbar {
   width: 100%;
-  z-index: 5;
+  z-index: 15;
 }
 
 .menuLista {
@@ -83,13 +83,15 @@ header {
 /* Roda Pé*/
 .rodaPe {
   width: 100%;
-  min-height: 50px;
+  min-height: 75px;
   height: auto;
   background-color: var(--cor-roxo);
   display: flex;
   flex-flow: row wrap;
+  gap: 30px;
+  justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
+  padding: 20px;
 }
 
 .assinaturaRodaPe p,
@@ -107,6 +109,48 @@ header {
 .assinaturaRodaPe a:hover {
   scale: 1.2;
   transition: all 500ms ease-in-out;
+}
+
+
+
+.redesRodaPe {
+  width: 50%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.instagramRodape {
+  width: 48px;
+  height: 48px;
+  background-image: url("../assets/img/instagram.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.linkedinRodape {
+  width: 48px;
+  height: 48px;
+  background-image: url("../assets/img/linkedin.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.donutsTechRodape {
+  width: 48px;
+  height: 48px;
+  background-image: url("../assets/img/donuts.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.iconRedes:hover {
+  scale: 1.2;
+  border-radius: 10px;
+  box-shadow: -3px 3px 5px 2px rgba(0, 0, 0, 0.5);
+
 }
 
 
@@ -144,6 +188,7 @@ header {
     top: auto;
     left: 32px;
     bottom: 32px;
+    z-index: 15;
   }
 
   .logoMenu {
@@ -156,8 +201,10 @@ header {
     position: fixed;
     height: 100vh;
     width: 100%;
+    z-index: 15;
     /* top: 0; */
     /* left: 0; */
     /* background-color: var(--cor-roxo); */
   }
 }
+

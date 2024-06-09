@@ -1,11 +1,11 @@
 .banner {
   width: 100%;
-  height: 100vh;
+  height: 40vh;
 }
 
 .videoBanner {
   width: 100%;
-  height: 100%;
+  height: 40vh;
   object-fit: cover;
   object-position: center;
   position: fixed;
@@ -17,7 +17,7 @@
 
 .textosBanner {
   width: 100%;
-  height: 100%;
+  height: 40vh;
   position: fixed;
   z-index: -1;
   display: flex;
@@ -32,7 +32,7 @@
   position: relative;
   color: var(--cor-lavander);
   font-weight: 700;
-  font-size: var(--clamp-titulo-1);
+  font-size: var(--clamp-titulo-2);
   font-family: var(--fonte-padrao);
   transform: scale(2);
   letter-spacing: 2px;
@@ -63,6 +63,11 @@
   left: -3px;
   text-shadow: -2px 0 var(--cor-azul-piscina);
   animation: glitch-2 3000ms linear reverse infinite;
+}
+.assinaturaBanner {
+  font-size: 16px;
+  color: var(--cor-lavander);
+  background-attachment: fixed;
 }
 
 @keyframes glitch-1 {
@@ -237,166 +242,145 @@
   }
 }
 
-.assinaturaBanner {
-  font-size: 16px;
-  color: var(--cor-lavander);
-  background-attachment: fixed;
-}
-
-
-.main {
+main {
   width: 100%;
+  min-height: 100vh;
+  background-color: var(--cor-lavander);
   z-index: 1;
 }
 
-.conteudo {
-  min-height: 100vh;
-  background-color: var(--cor-lavander);
-  padding: 100px 0;
-
+.esplanacao {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
 }
 
-.conteudoPrincipal {
-  width: 80%;
-  min-width: 320px;
-  margin: auto;
-  padding: 32px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.tituloConteudo {
-  width: 80%;
-  min-width: 300px;
+.esplanacaoTitulo {
   font-family: var(--fonte-padrao);
-  font-weight: 800;
+  font-weight: 900;
   font-size: var(--clamp-titulo-2);
   color: var(--cor-escuro-1);
   margin: 16px 0;
 }
 
-.textoConteudo {
-  width: 60%;
-  font-size: var(--clamp-texto-1);
-  color: var(--cor-smokie);
+.esplanacaoSubTitulo {
+  font-family: var(--fonte-padrao);
+  font-weight: 700;
+  font-size: var(--clamp-titulo-3);
+  margin: 8px 0;
+  color: var(--cor-roxo);
+}
+
+.esplanacaoItem {
+  font-size: var(--clamp-texto-2);
+  color: var(--cor-escuro-1);
   line-height: 1.5;
   font-weight: 500;
 }
 
-.textoConteudoDestaque {
-  color: var(--cor-roxo);
-  font-weight: 800;
-  margin: 8px 0;
+.detalheEsplanacao {
+  margin: 100px 0;
+  height: 3px;
+  border: none;
+  background-color: var(--cor-laranja);
 }
 
-.linkConteudoDestaque {
-  text-decoration: none;
-  color: var(--cor-laranja);
-  font-weight: 600;
-  font-style: italic;
+.exercicio {
+  /* width: 80%; */
+  min-width: 320px;
+  height: auto;
+  min-height: 100vh;
 }
 
-.tituloConteudoAtividade {
-  font-family: var(--fonte-padrao);
-  background-color: var(--cor-azul-piscina);
-  padding: 5px 20px;
-  color: var(--cor-roxo);
-  font-size: var(--clamp-titulo-2);
+.exercicioConteudo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0 5%;
 }
 
-.subtituloConteudo {
-  width: 80%;
-  min-width: 300px;
-  font-family: var(--fonte-padrao);
-  font-weight: 700;
-  font-size: var(--clamp-titulo-3);
-  color: var(--cor-escuro-1);
-  margin: 16px 0;
-}
-
-.unidade {
-  margin: 32px 0;
+.painelLista {
+  width: clamp(20rem, 15.3846rem + 20.5128vw, 40rem);
+  height: clamp(11.25rem, 8.6538rem + 11.5385vw, 22.5rem);
+  background-color: var(--cor-laranja);
+  border-radius: 20px;
+  box-shadow: -10px 10px 10px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.painelConteudo {
+  width: 100%;
+  display: flex;
+  align-items: center;
   gap: 20px;
-
 }
 
-.unidade-b {
-  flex-wrap: wrap-reverse;
-}
-
-.unidade img {
-  width: clamp(12.5rem, 11.0577rem + 6.4103vw, 18.75rem);
+.painelImg {
+  width: 40%;
   height: auto;
 }
 
-.subtituloUnidade {
-  width: 80%;
-  min-width: 300px;
-  font-family: var(--fonte-padrao);
-  font-weight: 700;
-  font-size: var(--clamp-titulo-3);
-  color: var(--cor-rosa);
-  margin: 16px 0;
-}
-
-.unidadeAjuste {
-  width: 60%;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.textoConteudoDestaqueUnidade {
-  color: var(--cor-azul-piscina);
-
-}
-
-.atividades {
+.interacaoCard {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
-  gap: 30px;
+  align-items: center;
+  gap: 10px;
 }
 
-.atividadeRealizada {
-  display: flex;
-  flex-direction: column;
-  align-items: first baseline;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.subtItuloConteudoAtividade {
-  /* width: 70%; */
-  font-weight: 700;
-  line-height: 1.5;
-  font-size: var(--clamp-titulo-3);
-  color: var(--cor-escuro-1);
-
-}
-
-.linkExercicios {
-  text-decoration: none;
+.painelTitulo {
   font-weight: 600;
-  background-color: var(--cor-roxo);
-  padding: 10px;
-  color: var(--cor-claro-1);
-  border-radius: 50px;
-  box-shadow: -5px 5px 5px 0 var(--cor-smokie);
+  font-size: var(--clamp-titulo-3);
+  margin: 16px 0;
 }
 
-.linkExercicios:hover {
-  color: var(--cor-amarelo);
-  scale: 0.9;
+.painelInput {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 5px solid var(--cor-roxo);
+  box-shadow: -5px 5px 0 0 var(--cor-roxo);
+}
+
+.painelInput:focus {
+  border: 5px solid var(--cor-azul-piscina);
+  box-shadow: -3px 3px 0 0 var(--cor-azul-piscina);
+}
+
+.painelBtn {
+  width: 100px;
+  padding: 5px 10px;
+  border: 3px solid var(--cor-rosa);
+  border-radius: 10px;
+  background-color: var(--cor-claro-1);
+  box-shadow: -3px 3px 0 0 var(--cor-rosa);
+  font-weight: 600;
+  color: var(--cor-escuro-1);
+  align-self: flex-end;
+}
+
+.painelBtn:hover {
+  cursor: pointer;
+  scale: 0.95;
   box-shadow: none;
-  transition: all 200ms ease-in-out;
+}
+
+.listaDisplay {
+  width: 90%;
+  min-width: 320px;
+}
+
+
+@media (max-width: 800px) {
+  .exercicioConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
 }

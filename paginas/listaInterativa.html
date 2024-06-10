@@ -23,7 +23,7 @@
         <div class="logoMenuMobile"></div>
         <nav class="navBar">
           <ul class="menuLista">
-            <li class="listaItem"><a class="menuLink" href="paginas/listaInterativa.html"> Lista Interativa</a></li>
+            <li class="listaItem"><a class="menuLink" > Lista Interativa</a></li>
             <li class="listaItem"><a class="menuLink" href="#"> Formularios</a></li>
             <li class="listaItem"><a class="menuLink" href="#"> Galeria de Imagem</a></li>
             <li class="listaItem"><a class="menuLink" href="#"> Tabela de Dados</a></li>
@@ -71,22 +71,61 @@
       </dl>
       <hr class="detalheEsplanacao">
     </section>
+
     <section class="exercicio" id="exercicio">
-
       <div class="exercicioConteudo">
-
         <div class="painelLista">
           <div class="painelConteudo">
             <img class="painelImg" src="../assets/img/lista.png" alt="Imagem de lista">
-            <div class="interacaoCard">
-              <h3 class="painelTitulo">Insira a nova tarefa</h3>
-              <input type="text" class="painelInput">
-              <button class="painelBtn">Adicionar</button>
-            </div>
+            <form action="submit" class="interacaoCard" id="formTarefa">
+              <h3 class="painelTitulo">Insira uma nova tarefa</h3>
+              <input type="text" class="painelInput" name="nova-tarefa" id="novaTarefaInput" placeholder="Adicione uma nova tarefa" minlength="3" required>
+              <button type="submit" class="painelBtn" id="btnAdicionarItem">Adicionar</button>
+            </form>
           </div>
         </div>
 
-        <div class="listaDisplay">
+        <div class="listaTarefa">
+          <table class="listaTabela">
+            <thead class="listaCabeca">
+              <tr class="linhaCabeca">
+                <td class="celulaCabeca celulaMarcadorCabeca">
+                  <div class="marcadorCabeca"></div>
+                </td>
+                <td colspan="10" class="celulaCabeca celulaTarefaCabeca">
+                  <h4 class="nomeTarefaTitulo">Tarefas</h4>
+                </td>
+                <td class="celulaCabeca celulaEditarCabeca">
+                  <div class="editar"><h5 class="editarTitulo tituloTopico">Editar</h5></div>
+                </td>
+                <td class="celulaCabeca celulaExcluirCabeca">
+                  <div class="excluir"><h5 class="excluirTitulo tituloTopico">Excluir</h5></div>
+                </td>
+              </tr>
+            </thead>
+
+            <tbody id="listaDisplay" class="listaDisplay">
+
+              <!-- <tr class="novaTarefa">
+                <td class="celulaMarcadorTarefa">
+                  <div class="marcadorTarefa"></div>
+                </td>
+                <td colspan="10" class="celulaTarefaNome">
+                  <h4 class="tarefaNome"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facere.</h4>
+                </td>
+                <td class="celulaTarefaEditar">
+                  <div class="tarefaEditar"></div>
+                </td>
+                <td class="celulaTarefaExcluir">
+                  <div class="tarefaExcluir"></div>
+                </td>
+              </tr> -->
+
+            </tbody>
+
+            <tbody id="listaConcluidas" class="listaDisplay listaConcluidas"></tbody>
+
+          </table>
         </div>
 
       </div>

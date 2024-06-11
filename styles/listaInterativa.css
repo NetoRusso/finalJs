@@ -441,6 +441,13 @@ main {
   justify-content: center;
 }
 
+.celulaExcluirCabeca:hover,
+.celulaEditarCabeca:hover {
+  cursor: pointer;
+  scale: 1.2;
+  transition: all 200ms ease-in-out;
+}
+
 .nomeTarefaTitulo,
 .tituloTopico {
   font-family: var(--fonte-padrao);
@@ -532,6 +539,7 @@ background-repeat: no-repeat;
 background-size: contain;
 }
 
+.marcadorTarefaConcluida:hover,
 .marcadorTarefa:hover,
 .tarefaEditar:hover,
 .tarefaExcluir:hover {
@@ -544,6 +552,30 @@ background-size: contain;
 .celulaTarefaNome {
   width: 100%;
   font-size: clamp(0.875rem, 0.7857rem + 0.1786vw, 1rem);
+}
+
+.linhaCabecaConcluida {
+  margin-top: 32px;
+}
+
+.marcadorCabecaConcluida {
+  width: 90%;
+  height: 90%;
+  border-radius: 50px;
+  background-image: url("../assets/img/retornar.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.marcadorTarefaConcluida {
+  width: 90%;
+  height: 90%;
+  border-radius: 50px;
+  background-image: url("../assets/img/retornar.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 

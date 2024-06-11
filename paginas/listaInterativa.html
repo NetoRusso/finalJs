@@ -23,7 +23,7 @@
         <div class="logoMenuMobile"></div>
         <nav class="navBar">
           <ul class="menuLista">
-            <li class="listaItem"><a class="menuLink" > Lista Interativa</a></li>
+            <li class="listaItem"><a class="menuLink"> Lista Interativa</a></li>
             <li class="listaItem"><a class="menuLink" href="#"> Formularios</a></li>
             <li class="listaItem"><a class="menuLink" href="#"> Galeria de Imagem</a></li>
             <li class="listaItem"><a class="menuLink" href="#"> Tabela de Dados</a></li>
@@ -79,7 +79,8 @@
             <img class="painelImg" src="../assets/img/lista.png" alt="Imagem de lista">
             <form action="submit" class="interacaoCard" id="formTarefa">
               <h3 class="painelTitulo">Insira uma nova tarefa</h3>
-              <input type="text" class="painelInput" name="nova-tarefa" id="novaTarefaInput" placeholder="Adicione uma nova tarefa" minlength="3" required>
+              <input type="text" class="painelInput" name="nova-tarefa" id="novaTarefaInput"
+                placeholder="Adicione uma nova tarefa" minlength="3" required>
               <button type="submit" class="painelBtn" id="btnAdicionarItem">Adicionar</button>
             </form>
           </div>
@@ -96,10 +97,14 @@
                   <h4 class="nomeTarefaTitulo">Tarefas</h4>
                 </td>
                 <td class="celulaCabeca celulaEditarCabeca">
-                  <div class="editar"><h5 class="editarTitulo tituloTopico">Editar</h5></div>
+                  <div class="editar">
+                    <h5 class="editarTitulo tituloTopico">Editar</h5>
+                  </div>
                 </td>
-                <td class="celulaCabeca celulaExcluirCabeca">
-                  <div class="excluir"><h5 class="excluirTitulo tituloTopico">Excluir</h5></div>
+                <td class="celulaCabeca celulaExcluirCabeca" id="excluir-ativo">
+                  <div class="excluirColuna" >
+                    <h5 class="excluirTitulo tituloTopico">Excluir</h5>
+                  </div>
                 </td>
               </tr>
             </thead>
@@ -122,6 +127,20 @@
               </tr> -->
 
             </tbody>
+            
+              <tr class="linhaCabeca linhaCabecaConcluida">
+                <td class="celulaCabeca celulaMarcadorCabeca">
+                  <div class="marcadorCabeca  marcadorCabecaConcluida"></div>
+                </td>
+                <td colspan="10" class="celulaCabeca celulaTarefaCabeca">
+                  <h4 class="nomeTarefaTitulo">Tarefas concluidas</h4>
+                </td>
+                <td class="celulaCabeca celulaExcluirCabeca" id="excluir-concluido">
+                  <div class="excluirColuna" >
+                    <h5 class="excluirTitulo tituloTopico">Excluir</h5>
+                  </div>
+                </td>
+              </tr>
 
             <tbody id="listaConcluidas" class="listaDisplay listaConcluidas"></tbody>
 
@@ -139,15 +158,21 @@
       </p>
     </div>
     <div class="redesRodaPe">
-      <a href="https://www.instagram.com/neto.russo/" target="_blank" title="instagram || Neto.Russo" ><div class="iconRedes instagramRodape" ></div></a>
+      <a href="https://www.instagram.com/neto.russo/" target="_blank" title="instagram || Neto.Russo">
+        <div class="iconRedes instagramRodape"></div>
+      </a>
 
-      <a href="https://www.linkedin.com/in/neto-russo/" target="_blank" title="linkedin || Neto Russo" ><div class="iconRedes linkedinRodape" ></div></a>
+      <a href="https://www.linkedin.com/in/neto-russo/" target="_blank" title="linkedin || Neto Russo">
+        <div class="iconRedes linkedinRodape"></div>
+      </a>
 
-      <a href="https://www.donutstech.com.br/" target="_blank" title="Donuts Tech" ><div class="iconRedes donutsTechRodape" ></div></a>
+      <a href="https://www.donutstech.com.br/" target="_blank" title="Donuts Tech">
+        <div class="iconRedes donutsTechRodape"></div>
+      </a>
     </div>
   </footer>
 
-<script src="../scripts/listaInterativa.js"></script>
+  <script src="../scripts/listaInterativa.js"></script>
 </body>
 
 </html>

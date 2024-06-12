@@ -1,0 +1,165 @@
+.esplanacao {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  
+  .esplanacaoTitulo {
+    font-family: var(--fonte-padrao);
+    font-weight: 900;
+    font-size: var(--clamp-titulo-2);
+    color: var(--cor-escuro-1);
+    margin: 16px 0;
+  }
+  
+  .esplanacaoSubTitulo {
+    font-family: var(--fonte-padrao);
+    font-weight: 700;
+    font-size: var(--clamp-titulo-3);
+    margin: 8px 0;
+    color: var(--cor-roxo);
+  }
+  
+  .esplanacaoItem {
+    font-size: var(--clamp-texto-2);
+    color: var(--cor-escuro-1);
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  
+  .detalheEsplanacao {
+    margin: 100px 0;
+    height: 3px;
+    border: none;
+    background-color: var(--cor-laranja);
+  }
+
+  .exercicio {
+    /* width: 80%; */
+    min-width: 320px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .exercicioConteudo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 5%;
+  }
+  
+  .painelLista {
+    width: clamp(20rem, 15.3846rem + 20.5128vw, 40rem);
+    min-height: clamp(11.25rem, 8.6538rem + 11.5385vw, 22.5rem);
+    height: auto;
+    background-color: var(--cor-rosa);
+    border-radius: 20px;
+    box-shadow: -10px 10px 10px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 1;
+    justify-content: space-around;
+  }
+  
+  .painelConteudo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .painelImg {
+    width: 35%;
+    height: auto;
+  }
+  
+  .interacaoCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .painelTitulo {
+    font-weight: 600;
+    font-size: var(--clamp-titulo-3);
+    margin: 16px 0;
+  }
+  
+  .painelInput {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 5px solid var(--cor-roxo);
+    box-shadow: -5px 5px 0 0 var(--cor-roxo);
+  }
+  
+  .painelInput:focus {
+    border: 5px solid var(--cor-azul-piscina);
+    box-shadow: -3px 3px 0 0 var(--cor-azul-piscina);
+  }
+  
+  .painelBtn {
+    width: 100px;
+    padding: 5px 10px;
+    border: 3px solid var(--cor-roxo);
+    border-radius: 10px;
+    background-color: var(--cor-claro-1);
+    box-shadow: -3px 3px 0 0 var(--cor-roxo);
+    font-weight: 600;
+    color: var(--cor-escuro-1);
+    align-self: flex-end;
+  }
+  
+  .painelBtn:hover {
+    cursor: pointer;
+    scale: 0.95;
+    box-shadow: none;
+  }
+
+  .boxCorInput {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .corEbotao {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .corCampoFormulario {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+  }
+
+  .tituloFormularioCriado {
+    width: 50%;
+    min-width: 320px;
+    font-size: var(--clamp-titulo-2);
+    margin-top: 32px;
+  }
+
+
+
+  @media (max-width: 800px) {
+    .exercicioConteudo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .listaTabela {
+      margin-top: 32px;
+    }
+  
+  
+  }

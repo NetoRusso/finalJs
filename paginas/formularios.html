@@ -84,7 +84,7 @@
 
 
               <select name="campo-formulario" id="campoFormulario" class="painelInput campoFormulario" required>
-                <option value="default">Escolha o tipo de campo</option>
+                <option value="">Escolha o tipo de campo</option>
                 <option value="text">Campo de Texto</option>
                 <option value="email">E-mail</option>
                 <option value="password">Senha</option>
@@ -94,7 +94,7 @@
 
               </select>
               <input type="text" class="painelInput" name="opcoes" id="opcoes"
-                placeholder="Adicione os valores das opções" minlength="3" required disabled>
+                placeholder="Adicione os valores das opções" disabled>
               <input type="text" class="painelInput" name="nova-tarefa" id="novaTarefaInput"
                 placeholder="Adicione o nome do campo" minlength="3" required>
               <div class="corEbotao">
@@ -114,16 +114,14 @@
           <h4 class="tituloFormularioCriado">
             Aqui está o seu formulario:
           </h4>
-          <form id="formularioAqui">
+          <form id="formularioAqui" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
 
           </form>
+          <div class="codigoBox">
+            <p id="codigoMensagem" class="codigoMensagem">Código Copiado</p>
+            <button type="button" id="codigoBtn" class="painelBtn">Código</button>
+          </div>
         </div>
-
-
-
-
-
-
       </div>
 
     </section>

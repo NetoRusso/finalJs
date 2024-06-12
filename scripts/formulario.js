@@ -7,12 +7,14 @@ const formulario = document.getElementById("formularioAqui");
 const campoSelection = document.getElementById("campoFormulario");
 const inputOpcaoTexto = document.getElementById("opcoes");
 const tituloFormulario = document.getElementById("tituloFormulario");
-const btnAdicionarItem = document.getElementById("formTarefa");
+const formAdicionarItem = document.getElementById("formTarefa");
+const copiarCodigoBtn = document.getElementById("codigoBtn");
+const codigoMensagem = document.getElementById("codigoMensagem");
 
-id = 1;
+let id = 1;
 
-btnAdicionarItem.addEventListener("submit", (e) => {
-  e.preventDefault() 
+formAdicionarItem.addEventListener("submit", (e) => {
+  e.preventDefault()
   let gruposDeValores = {
     tipo: e.target[0].value,
     titulo: e.target[2].value,
@@ -23,55 +25,324 @@ btnAdicionarItem.addEventListener("submit", (e) => {
     gruposDeValores['opcao'] = (e.target[1].value).split(';');
   }
 
-  formulario.innerHTML += criarElementoHTML(gruposDeValores.tipo, gruposDeValores.opcao, gruposDeValores.titulo, gruposDeValores.cor ,id);
+  formulario.innerHTML += criarElementoHTML(gruposDeValores.tipo, gruposDeValores.opcao, gruposDeValores.titulo, gruposDeValores.cor, id);
 
+  let btn = document.querySelectorAll(`.excluirItem`);
+
+  btn.forEach((btnEl) => {
+    btnEl.addEventListener("click", (e) => {
+      excluir(e)
+    })
+  })
+
+
+  copiarCodigoBtn.style.display = "block";
+
+  formAdicionarItem.reset();
+  inputOpcaoTexto.disabled = true;
   ++id;
-})
+});
+
+const excluir = (e) => {
+  const idElemento = (e.target.id).split('-')[1];
+  const elemento = document.getElementById(idElemento)
+  elemento.remove();
+  let btn = document.querySelectorAll(`.excluirItem`);
+
+  if (btn.length === 0) {
+    copiarCodigoBtn.style.display = "none";
+  }
+}
 
 const criarElementoHTML = (valor, opcoes, titulo, cor, id) => {
   switch (valor) {
     case "text":
       return `
-      <input type="text" class="painelInput" placeholder="${titulo}" name="${(titulo.replace(/\s/g, '')).toLowerCase()}" id="${id}" style="border-color: ${cor};box-shadow: -5px 5px 0 0 ${cor};">
+      <div id="${id}" style="
+        width: 100%; 
+        display: flex; 
+        align-items: center;
+        justify-content: right;
+        gap: 3%;
+        margin-left: 10px;
+      ">
+
+      <button class="excluirItem" type="button" id="btn-${id}" style ="
+        width: auto;
+        heigth: auto; 
+        aspect-ratio: 1; 
+        padding: 16px;
+        background-image: url('../assets/img/excluirIcon.png'); 
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: contain; 
+        border-radius: 50px; 
+        border: none; 
+        cursor: pointer;
+      ">
+        
+      </button>
+
+      <input class="inputCriado" type="text" placeholder="${titulo}" name="${(titulo.replace(/\s/g, '')).toLowerCase()}" style="     
+        width: 60%;
+        min-width: 280px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        outline: none;
+        border: 5px solid ${cor};
+        box-shadow: -5px 5px 0 0 ${cor};
+      ">
+      </div>
       `;
       break;
 
     case "email":
       return `
-      <input type="email" class="painelInput" placeholder="${titulo}" name="${(titulo.replace(/\s/g, '')).toLowerCase()}" id="${id}" style="border-color: ${cor};box-shadow: -5px 5px 0 0 ${cor};">
+      <div id="${id}"style="
+        width: 100%; 
+        display: flex; 
+        align-items: center;
+        justify-content: right;
+        gap: 3%;
+        margin-left: 10px;
+      ">
+
+    <button class="excluirItem" type="button" id="btn-${id}"style ="
+        width: auto;
+        heigth: auto; 
+        aspect-ratio: 1; 
+        padding: 16px;
+        background-image: url('../assets/img/excluirIcon.png'); 
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: contain; 
+        border-radius: 50px; 
+        border: none; 
+        cursor: pointer;
+      ">
+    
+    </button>
+      <input class="inputCriado" type="email" placeholder="${titulo}" name="${(titulo.replace(/\s/g, '')).toLowerCase()}" style="     
+        width: 60%;
+        min-width: 280px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        outline: none;
+        border: 5px solid ${cor};
+        box-shadow: -5px 5px 0 0 ${cor};
+      ">
+      </div>
       `;
       break;
 
     case "password":
       return `
-      <input type="password" class="painelInput" placeholder="${titulo}" name="${(titulo.replace(/\s/g, '')).toLowerCase()}" id="${id}" style="border-color: ${cor};box-shadow: -5px 5px 0 0 ${cor};">
+      <div id="${id}" style="
+        width: 100%; 
+        display: flex; 
+        align-items: center;
+        justify-content: right;
+        gap: 3%;
+        margin-left: 10px;
+      ">
+
+      <button class="excluirItem" type="button" id="btn-${id}" style ="
+        width: auto;
+        heigth: auto; 
+        aspect-ratio: 1; 
+        padding: 16px;
+        background-image: url('../assets/img/excluirIcon.png'); 
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: contain; 
+        border-radius: 50px; 
+        border: none; 
+        cursor: pointer;
+      ">
+        
+      </button>
+      <input class="inputCriado" type="password" placeholder="${titulo}" name="${(titulo.replace(/\s/g, '')).toLowerCase()}" style="     
+        width: 60%;
+        min-width: 280px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        outline: none;
+        border: 5px solid ${cor};
+        box-shadow: -5px 5px 0 0 ${cor};
+      ">
+      </div>
       `;
       break;
 
     case "number":
       return `
-      <input type="number" class="painelInput" placeholder="${titulo}" name="${(titulo.replace(/\s/g, '')).toLowerCase()}" id="${id}" style="border-color: ${cor};box-shadow: -5px 5px 0 0 ${cor};">
+      <div id="${id}"style="
+        width: 100%; 
+        display: flex; 
+        align-items: center;
+        justify-content: right;
+        gap: 3%;
+        margin-left: 10px;
+      ">
+
+      <button class="excluirItem" type="button" id="btn-${id}" style ="
+        width: auto;
+        heigth: auto; 
+        aspect-ratio: 1; 
+        padding: 16px;
+        background-image: url('../assets/img/excluirIcon.png'); 
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: contain; 
+        border-radius: 50px; 
+        border: none; 
+        cursor: pointer;
+      ">
+        
+      </button>
+      <input class="inputCriado" type="number" placeholder="${titulo}" name="${(titulo.replace(/\s/g, '')).toLowerCase()}" style="     
+        width: 60%;
+        min-width: 280px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        outline: none;
+        border: 5px solid ${cor};
+        box-shadow: -5px 5px 0 0 ${cor};
+      ">
+      </div>
       `;
       break;
 
     case "select":
       let html = `
-        <select class="painelInput" name="${(titulo.replace(/\s/g, '')).toLowerCase()}" id="${id}" style="border-color: ${cor};box-shadow: -5px 5px 0 0 ${cor};"> 
+      <div id="${id}" style="
+        width: 100%; 
+        display: flex; 
+        align-items: center;
+        justify-content: right;
+        gap: 3%;
+        margin-left: 10px;
+      ">
+
+      <button class="excluirItem" type="button" id="btn-${id}" style ="
+        width: auto;
+        heigth: auto; 
+        aspect-ratio: 1; 
+        padding: 16px;
+        background-image: url('../assets/img/excluirIcon.png'); 
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: contain; 
+        border-radius: 50px; 
+        border: none; 
+        cursor: pointer;
+      ">
+
+      </button>
+        <select class="inputCriado" name="${(titulo.replace(/\s/g, '')).toLowerCase()}" style="     
+        width: 60%;
+        min-width: 280px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        outline: none;
+        border: 5px solid ${cor};
+        box-shadow: -5px 5px 0 0 ${cor};
+      ">
+        <option value=default>${titulo}</option> 
       `;
 
       opcoes.forEach((op) => {
-        html += `<option value="${(op.replace(/\s/g, '')).toLowerCase()}">${op}</option>`
+        if (op !== "") {
+          html += `<option value="${(op.replace(/\s/g, '')).toLowerCase()}">${op}</option>`
+        }
       })
 
-      html += `</select>`;
+      html += `</select></div>`;
 
       return html;
       break;
     case "button":
-      return `<button type="submit" class="painelBtn"  id="${id}">${titulo}</button>`
+      return `
+      <div id="${id}"style="
+        width: 100%; 
+        display: flex; 
+        align-items: center;
+        justify-content: right;
+        gap: 3%;
+        margin-left: 10px;
+      ">
+
+      <button class="excluirItem" type="button" id="btn-${id}" style ="
+        width: auto;
+        heigth: auto; 
+        aspect-ratio: 1; 
+        padding: 16px;
+        background-image: url('../assets/img/excluirIcon.png'); 
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: contain; 
+        border-radius: 50px; 
+        border: none; 
+        cursor: pointer;
+      ">
+      </button>
+      <button class="inputCriado" type="submit"  
+      style="
+        cursor: pointer;
+        width: auto;
+        min-width: 100px;
+        padding: 5px 10px;
+        border: 3px solid ${cor};
+        border-radius: 10px;
+        background-color: var(--cor-claro-1);
+        box-shadow: -3px 3px 0 0 ${cor};
+        font-weight: 600;
+        color: var(--cor-escuro-1);
+        align-self: flex-end; 
+      ">
+        ${titulo}
+        </button>
+      </div>
+      `
       break;
   }
 }
+
+const copiarCodigo = (texto) => {
+  if (!navigator.clipboard) {
+    alert("Seu navegador não suporta copiar para área de transferência!")
+  }
+
+  navigator.clipboard.writeText(texto)
+    .then(() => {
+      console.log("Texto copiado")
+    })
+    .catch(err => {
+      console.error("Falha ao copiar", err)
+    });
+
+  codigoMensagem.style.display = 'block';
+  setTimeout(() => {
+    codigoMensagem.style.display = 'none';
+  }, 3000);
+}
+
+copiarCodigoBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  let codigo = "";
+  let selecao = formulario.querySelectorAll(".inputCriado");
+  selecao.forEach((e) => {
+    console.log(e);
+    codigo += `
+    ${e.outerHTML};
+    `
+  })
+
+  copiarCodigo(codigo);
+  // console.log("foi :" + codigo);
+
+})
 
 
 campoSelection.addEventListener("change", (e) => {

@@ -1,3 +1,5 @@
+console.log("Exercicio 01 Foi!");
+
 const exercicioSecao = document.getElementById("exercicio");
 const painelLista = document.querySelector(".painelLista");
 const exercicioConteudo = document.querySelector(".exercicioConteudo");

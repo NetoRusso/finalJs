@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Neto Russo">
+  <link rel="shortcut icon" href="../assets/img/escrita.png" type="image/x-png">
+
+  <title>Galeria de Imagens</title>
+  <link rel="stylesheet" href="../styles/rootEReset.css">
+  <link rel="stylesheet" href="../styles/menuEFooter.css">
+  <link rel="stylesheet" href="../styles/bannerPaginas.css">
+  <link rel="stylesheet" href="../styles/galeriaDeImagens.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="menu">
+      <div class="menuConteudo">
+
+        <a class="logoMenu" href="../index.html"></a>
+        <div class="logoMenuMobile"></div>
+        <nav class="navBar">
+          <ul class="menuLista">
+            <li class="listaItem"><a class="menuLink" href="listaInterativa.html"> Lista Interativa</a></li>
+            <li class="listaItem"><a class="menuLink" href="formularios.html"> Formularios</a></li>
+            <li class="listaItem"><a class="menuLink"> Galeria de Imagem</a></li>
+            <li class="listaItem"><a class="menuLink" href="#"> Tabela de Dados</a></li>
+            <li class="listaItem"><a class="menuLink" href="#"> Carrinho de compras</a></li>
+            <li class="listaItem"><a class="menuLink" href="#"> Curriculum</a></li>
+          </ul>
+          <div class="menuMobileConteudo">
+            <div class="fundoModal">
+              <ul class="menuListaMobile">
+                <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Lista Interativa</a></li>
+                <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Formularios</a></li>
+                <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Galeria de Imagem</a></li>
+                <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Tabela de Dados</a></li>
+                <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Carrinho de compras</a></li>
+                <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Curriculum</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="banner">
+    <div class="textosBanner">
+      <h2 class="tituloBanner" data-text="03-Imagens">03-Imagens</h2>
+      <p class="assinaturaBanner"> By Neto Russo &copy;</p>
+    </div>
+    <video class="videoBanner" loop muted autoplay>
+      <source src="../assets/videos/5374813_Coll_wavebreak_Binary_Binary Codes_1280x720.mp4">
+      O seu navegador não suporta video
+    </video>
+  </div>
+  <main>
+    <section class="esplanacao" aria-label="Exposição do Exercício">
+      <dl class="esplanacaoLista">
+        <dt class="esplanacaoTitulo">Galeria de Imagens com Modal:</dt>
+        <dt class="esplanacaoSubTitulo">Desafio:</dt>
+        <dd class="esplanacaoItem">Implemente uma galeria de imagens onde os usuários possam clicar em uma imagem para
+          visualizá-la em um modal em tamanho maior.</dd>
+        <dt class="esplanacaoSubTitulo">Requisitos:</dt>
+        <dd class="esplanacaoItem">Uma grade de miniaturas de imagens.</dd>
+        <dd class="esplanacaoItem">Um modal que exibe a imagem em tamanho maior quando uma miniatura é clicada.</dd>
+        <dd class="esplanacaoItem">Botões para navegação dentro do modal (próxima e anterior).</dd>
+        <dd class="esplanacaoItem">Utilize eventos do DOM (como `click`) para abrir o modal e navegar entre as imagens.
+        </dd>
+      </dl>
+      <hr class="detalheEsplanacao">
+    </section>
+    <section class="exercicio" id="exercicio" aria-label="Resolução do Exercício">
+
+      <div class="exercicioConteudo">
+        <div class="painelLista">
+          <div class="painelConteudo">
+            <img class="painelImg" src="../assets/img/addImagem.png" alt="Imagem de lista">
+            <form action="submit" class="interacaoCard" id="formTarefa">
+              <h3 id="tituloFormulario" class="painelTitulo">Nova imagem</h3>
+              <p class="painelAviso">Adicione uma uma url finalizado em ".jpg" ou ".png"</p>
+              <input type="text" class="painelInput" name="nova-imagem" id="novaImagemInput"
+                placeholder="Adicione o nome do campo" minlength="3" required>
+              <button type="submit" class="painelBtn" id="btnAdicionarItem">Adicionar</button>
+            </form>
+          </div>
+        </div>
+        <div class="galeriaImagens">
+          <h4 class="tituloGaleria">
+            Galeria de Imagens:
+          </h4>
+          <div class="imagensGrade">
+            <div class="primeiraLinhaGrade linhaGrade">
+              <img class="imagem"
+                src="https://s2-techtudo.glbimg.com/R3KIRRddR-e_yxZU695KnQjAtsA=/0x0:695x390/888x0/smart/filters:strip_icc/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2022/H/F/fyLrqvTwWl7irghMczXA/usa-basketball-7-.jpg"
+                alt="Imagem">
+
+              <img class="imagem"
+                src="https://s2-techtudo.glbimg.com/KgckFX8dQ0jR6OPcfE7GJlIg8R8=/0x0:1914x1080/1000x0/smart/filters:strip_icc/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2022/B/e/pUNpRzTJWLegQB27miyg/final-fantasy-7-crisis-core-reunion.png"
+                alt="Imagem">
+
+              <img class="imagem"
+                src="https://s2-techtudo.glbimg.com/MQtVDEIhTlT_kZUB0zR7IxY58r4=/1600x0/smart/filters:strip_icc/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2022/r/6/FTvbNiQt6KdxABfkQOjA/red-dead-redemption-2-rockstar.jpg"
+                alt="Imagem">
+
+              <img class="imagem"
+                src="https://s2-techtudo.glbimg.com/0o5LUTCZG_KtDDdH74ZCoJ30FdM=/695x0/smart/filters:strip_icc/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/o/C/LNXpHYSV2mywpxzgD8pQ/dez-melhores-jogos-lancados-2021-metacritic-forza-horizon-5.jpg"
+                alt="Imagem">
+
+              <img class="imagem"
+                src="https://s2-techtudo.glbimg.com/vy9yC_4FuBdMDN_Az4ux_2KYdCw=/695x0/smart/filters:strip_icc/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/c/V/yQW9BURaWbTWw3OGt4Xg/the-last-of-us-part-2-artes.jpg"
+                alt="Imagem">
+            </div>
+            <div class="segundaLinhaGrade linhaGrade"></div>
+
+          </div>
+
+        </div>
+      </div>
+
+    <div id="modalImagem" class="modalImagem">
+      <div class="modalImagemConteudo">
+        <img class="modalImagemImg" src="" alt="Imagem">
+        </div>
+          <div class="modalImagemBtns">
+            <button class="modalImagemBtn" id="btnFecharModal">X</button>
+          </div>
+    </div>
+    </section>
+  </main>
+
+
+
+
+
+  <footer class="rodaPe">
+    <div class="assinaturaRodaPe">
+      <p> Pensado, desenhado e desenvolvido por <a href="" title="Curriculum || Neto Russo">Neto Russo</a> &copy || 2024
+      </p>
+    </div>
+    <div class="redesRodaPe">
+      <a href="https://www.instagram.com/neto.russo/" target="_blank" title="instagram || Neto.Russo">
+        <div class="iconRedes instagramRodape"></div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/neto-russo/" target="_blank" title="linkedin || Neto Russo">
+        <div class="iconRedes linkedinRodape"></div>
+      </a>
+
+      <a href="https://www.donutstech.com.br/" target="_blank" title="Donuts Tech">
+        <div class="iconRedes donutsTechRodape"></div>
+      </a>
+    </div>
+  </footer>
+
+  <script src="../scripts/galeriaDeImagens.js"></script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-console.log("Exercicio 02 Foi!");
+console.log("Exercício 02 Foi!");
 
 const exercicioSecao = document.getElementById("exercicio");
 const exercicioConteudo = document.querySelector(".exercicioConteudo");
@@ -14,6 +14,7 @@ const codigoMensagem = document.getElementById("codigoMensagem");
 let id = 1;
 
 formAdicionarItem.addEventListener("submit", (e) => {
+  
   e.preventDefault()
   let gruposDeValores = {
     tipo: e.target[0].value,
@@ -367,7 +368,7 @@ window.addEventListener("scroll", () => {
 
   if (posicaoExercicio <= 400 && window.innerWidth >= 800) {
     painelLista.style.position = "fixed";
-    painelLista.style.top = "128px";
+    painelLista.style.top = "176px";
     painelLista.style.left = "32px";
     exercicioConteudo.style.justifyContent = "flex-end";
   } else {

@@ -1,0 +1,236 @@
+.exercicio {
+  /* width: 80%; */
+  min-width: 320px;
+  height: auto;
+  min-height: 100vh;
+}
+
+.exercicioConteudo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 5%;
+  gap: 5%;
+}
+
+.painelLista {
+  width: clamp(20rem, 15.3846rem + 20.5128vw, 40rem);
+  min-height: clamp(11.25rem, 8.6538rem + 11.5385vw, 22.5rem);
+  height: auto;
+  background-color: var(--cor-azul-piscina);
+  border-radius: 20px;
+  box-shadow: -10px 10px 10px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 1;
+  justify-content: space-around;
+}
+
+.painelConteudo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.painelImg {
+  width: 35%;
+  height: auto;
+}
+
+.interacaoCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.painelTitulo {
+  font-weight: 600;
+  font-size: var(--clamp-titulo-3);
+  margin: 16px 0;
+}
+
+.painelInput {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 5px solid var(--cor-rosa);
+  box-shadow: -5px 5px 0 0 var(--cor-rosa);
+}
+
+.painelInput:focus {
+  border: 5px solid var(--cor-roxo);
+  box-shadow: -3px 3px 0 0 var(--cor-roxo);
+}
+
+.painelBtn {
+  width: 100px;
+  padding: 5px 10px;
+  border: 3px solid var(--cor-rosa);
+  border-radius: 10px;
+  background-color: var(--cor-claro-1);
+  box-shadow: -3px 3px 0 0 var(--cor-rosa);
+  font-weight: 600;
+  color: var(--cor-escuro-1);
+  align-self: flex-end;
+}
+
+.painelBtn:hover {
+  cursor: pointer;
+  scale: 0.95;
+  border: 3px solid var(--cor-roxo);
+  box-shadow: none;
+  transition: all 200ms ease-in-out;
+}
+
+.painelAviso {
+  display: none;
+  font-size: var(--clamp-texto-2);
+  color: var(--cor-roxo);
+  padding: 5px;
+  margin-top: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.galeriaImagens {
+  width: 60%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.tituloGaleria {
+  width: 100%;
+  min-width: 320px;
+  font-family: var(--fonte-padrao);
+  font-size: var(--clamp-titulo-2);
+  font-weight: 800;
+  margin-top: 32px;
+  text-align: right;
+}
+
+.imagensGrade {
+  width: 100%;
+  min-width: 320px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: 32px 0;
+}
+
+.linhaGrade {
+  width: 100%;
+  min-width: 320px;
+  height: 300px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.imagem {
+  width: 30%;
+  /* min-width: 80px; */
+  height: 300px;
+  object-fit: cover;
+  object-position: left;
+  cursor: pointer;
+  flex: 1;
+  border-radius: 10px;
+}
+
+.imagem:hover { 
+  flex: 5;
+  width: 50%;
+  transition: all 300ms ease-in-out;
+}
+
+.imagem:not(:hover) {
+  width: 1%;
+  min-width: none;
+}
+
+.modalImagem {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalImagemConteudo {
+  width: 80%;
+  min-width: 320px;
+  height: auto;
+  max-width: 80vh;
+  border-radius: 20px;
+  box-shadow: -10px 10px 10px 5px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 1;
+  justify-content: space-around;
+  pointer-events: none;
+}
+
+.modalImagemImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.modalImagemBtn {
+  width: 32px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  background-color: var(--cor-rosa);
+  border-radius: 50px;
+  color: var(--cor-amarelo);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.modalImagemBtn:hover {
+  scale: 1.2;
+  background-color: var(--cor-roxo);
+  transition: all 200ms ease-in-out;
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+  .exercicioConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .listaTabela {
+    margin-top: 32px;
+  }
+
+  .imagensGrade {
+    height: auto;
+    min-height: 50vh;
+  }
+
+
+}

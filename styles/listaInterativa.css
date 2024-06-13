@@ -1,39 +1,3 @@
-.esplanacao {
-  width: 80%;
-  margin: 0 auto;
-  padding: 50px 0;
-}
-
-.esplanacaoTitulo {
-  font-family: var(--fonte-padrao);
-  font-weight: 900;
-  font-size: var(--clamp-titulo-2);
-  color: var(--cor-escuro-1);
-  margin: 16px 0;
-}
-
-.esplanacaoSubTitulo {
-  font-family: var(--fonte-padrao);
-  font-weight: 700;
-  font-size: var(--clamp-titulo-3);
-  margin: 8px 0;
-  color: var(--cor-roxo);
-}
-
-.esplanacaoItem {
-  font-size: var(--clamp-texto-2);
-  color: var(--cor-escuro-1);
-  line-height: 1.5;
-  font-weight: 500;
-}
-
-.detalheEsplanacao {
-  margin: 100px 0;
-  height: 3px;
-  border: none;
-  background-color: var(--cor-laranja);
-}
-
 .exercicio {
   /* width: 80%; */
   min-width: 320px;
@@ -106,10 +70,10 @@
 .painelBtn {
   width: 100px;
   padding: 5px 10px;
-  border: 3px solid var(--cor-rosa);
+  border: 3px solid var(--cor-roxo);
   border-radius: 10px;
   background-color: var(--cor-claro-1);
-  box-shadow: -3px 3px 0 0 var(--cor-rosa);
+  box-shadow: -3px 3px 0 0 var(--cor-roxo);
   font-weight: 600;
   color: var(--cor-escuro-1);
   align-self: flex-end;
@@ -119,6 +83,8 @@
   cursor: pointer;
   scale: 0.95;
   box-shadow: none;
+  border: 3px solid var(--cor-azul-piscina);
+  transition: all 200ms ease-in-out;
 }
 
 .listaTarefa {

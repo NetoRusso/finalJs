@@ -1,4 +1,4 @@
-console.log("Exercicio 01 Foi!");
+console.log("Exercício 01 Foi!");
 
 const exercicioSecao = document.getElementById("exercicio");
 const painelLista = document.querySelector(".painelLista");
@@ -270,7 +270,7 @@ window.addEventListener("scroll", () => {
 
   if (posicaoExercicio <= 400 && window.innerWidth >= 800) {
     painelLista.style.position = "fixed";
-    painelLista.style.top = "128px";
+    painelLista.style.top = "176px";
     painelLista.style.left = "32px";
     exercicioConteudo.style.justifyContent = "flex-end";
   } else {

@@ -170,7 +170,7 @@
 
 .modalImagemConteudo {
   width: 80%;
-  min-width: 320px;
+  min-width: 280px;
   height: auto;
   max-width: 80vh;
   border-radius: 20px;
@@ -205,9 +205,35 @@
   cursor: pointer;
 }
 
+
 .modalImagemBtn:hover {
   scale: 1.2;
   background-color: var(--cor-roxo);
+  transition: all 200ms ease-in-out;
+}
+
+.centralModal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.modalBtnlateral {
+  width: 32px;
+  aspect-ratio: 1;
+  background-color: var(--cor-amarelo);
+  border-radius: 50px;
+  color: var(--cor-roxo);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.modalBtnlateral:hover {
+  scale: 1.2;
+  background-color: var(--cor-azul-piscina);
   transition: all 200ms ease-in-out;
 }
 
@@ -230,6 +256,15 @@
   .imagensGrade {
     height: auto;
     min-height: 50vh;
+  }
+
+  .centralModal {
+    /* width: 90%; */
+    gap: 0;
+  }
+
+  .modalImagemConteudo {
+    width: 70%;
   }
 
 

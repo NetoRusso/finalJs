@@ -8,10 +8,61 @@ const novaImagemInput = document.getElementById("novaImagemInput");
 const painelAviso = document.querySelector(".painelAviso");
 const segundaLinhaGrade = document.querySelector(".segundaLinhaGrade");
 const modalImagem = document.getElementById("modalImagem");
+const btnFecharModal = document.getElementById("btnFecharModal");
+const btnPrevModal = document.getElementById("btnPrevModal");
+const btnNextModal = document.getElementById("btnNextModal");
+const modalImagemImg = document.getElementById("modalImagemImg");
 let imagens = document.querySelectorAll(".imagem");
 
-// let todasImagens = [];
-console.log(imagens);
+let id = 0;
+
+imagens.forEach((imagem) => {
+  imagem.addEventListener("click", () => {
+    id = Number(imagem.id)
+    let atual = imagem.src;
+    
+    modalImagem.style.display = "flex";
+    modalImagemImg.src = atual;
+
+    btnNextModal.addEventListener("click", () => {
+      novaImage(id, "proximo");
+    });
+
+    btnPrevModal.addEventListener("click", () => {
+      novaImage(id, "anterior");
+    })
+
+    btnFecharModal.addEventListener("click", () => {
+      modalImagem.style.display = "none";
+    });
+  })
+});
+
+const novaImage = (idIndex, type) => {
+
+  let idProximo = idIndex + 1; 4
+  let idAnterior = idIndex - 1; 2
+
+  if (idProximo > imagens.length) {
+    idProximo = 1;
+  }
+
+  if (idAnterior < 1 ) {
+    idAnterior = imagens.length;
+  }
+  
+  if ( type === "proximo") { 
+    modalImagemImg.src = imagens[idProximo - 1].src;
+    id = idProximo; 
+  } 
+  
+  if ( type === "anterior") {
+    modalImagemImg.src = imagens[idAnterior - 1].src;
+    id = idAnterior;
+  }
+}
+
+
 
 novaImagemInput.addEventListener("focus", () => {
   painelAviso.style.display = "block";
@@ -21,23 +72,26 @@ novaImagemInput.addEventListener("blur", () => {
   painelAviso.style.display = "none";
 });
 
-
-const criarImagem = (url) => {
+const criarImagem = (url, contador) => {
   let imagem = url;
   let novaImagem = `
-    <img class="imagem" src="${imagem}" alt="Imagem">
+    <img id="${contador}" class="imagem" src="${imagem}" alt="Imagem">
   `;
   segundaLinhaGrade.insertAdjacentHTML("beforeend", novaImagem);
 };
 
+let contador = 6;
+
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
+
   let novaImagem = novaImagemInput.value;
 
   if (novaImagem.endsWith(".jpg") || novaImagem.endsWith(".png")) {
-    criarImagem(novaImagem);
+    criarImagem(novaImagem, contador);
     imagens = document.querySelectorAll(".imagem");
     console.log("imagens", imagens);
+    contador++;
     formulario.reset();
   } else {
     painelAviso.style.display = "block";
@@ -48,24 +102,26 @@ formulario.addEventListener("submit", (e) => {
 
   imagens.forEach((imagem) => {
     imagem.addEventListener("click", () => {
-      let imagemAmpliada = (imagem.src);
-      // console.log(imagemAmpliada);
-  
+      id = Number(imagem.id)
+      let atual = imagem.src;
+      
       modalImagem.style.display = "flex";
-      modalImagem.addEventListener("click", () => {
-        modalImagem.style.display = "none";
+      modalImagemImg.src = atual;
+  
+      btnNextModal.addEventListener("click", () => {
+        novaImage(id, "proximo");
       });
   
-      modalImagem.querySelector(".modalImagemImg").src = imagemAmpliada;
+      btnPrevModal.addEventListener("click", () => {
+        novaImage(id, "anterior");
+      })
   
-      modalImagem.querySelector(".modalImagemBtn").addEventListener("click", () => {
+      btnFecharModal.addEventListener("click", () => {
         modalImagem.style.display = "none";
       });
-  
-  
-  
-    });
+    })
   });
+
 });
 
 window.addEventListener("scroll", () => {

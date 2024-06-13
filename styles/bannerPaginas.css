@@ -249,3 +249,41 @@ main {
   background-color: var(--cor-lavander);
   z-index: 1;
 }
+
+/* Esplanção do exercício*/
+
+.esplanacao {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.esplanacaoTitulo {
+  font-family: var(--fonte-padrao);
+  font-weight: 900;
+  font-size: var(--clamp-titulo-2);
+  color: var(--cor-escuro-1);
+  margin: 16px 0;
+}
+
+.esplanacaoSubTitulo {
+  font-family: var(--fonte-padrao);
+  font-weight: 700;
+  font-size: var(--clamp-titulo-3);
+  margin: 8px 0;
+  color: var(--cor-roxo);
+}
+
+.esplanacaoItem {
+  font-size: var(--clamp-texto-2);
+  color: var(--cor-escuro-1);
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.detalheEsplanacao {
+  margin: 100px 0;
+  height: 3px;
+  border: none;
+  background-color: var(--cor-laranja);
+}

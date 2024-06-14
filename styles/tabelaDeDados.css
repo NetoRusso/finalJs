@@ -8,6 +8,7 @@
   .exercicioConteudo {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 0 5%;
     gap: 5%;
@@ -109,8 +110,14 @@
   }
 
   .tabelaConteudo {
-    width: 100%;
+    width: 90%;
+    min-width: 300px;
     height: auto;
+  }
+
+  .inputFiltro {
+    width: 90%;
+    min-width: 300px;
   }
 
 
@@ -163,10 +170,23 @@
     border: solid 2px var(--cor-roxo);
     font-weight: 600;
   }
-
+  
   td {
     padding: 5px 10px;
     border: solid 2px var(--cor-roxo);
     border-radius: 20px;
+    font-size: var(--clamp-texto-2);
     color: var(--cor-escuro-1);
   }
+
+  @media (max-width: 800px) {
+    .tabelaAniversariosSecao {
+      align-items: center;
+      justify-content: center;
+    }
+
+    .inputFiltro {
+      align-self: center;
+      margin-left: 10px ;
+  }
+}

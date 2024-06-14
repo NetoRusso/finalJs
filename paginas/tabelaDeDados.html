@@ -17,7 +17,7 @@
 <body>
   <header>
     <div class="menu">
-      <div class="menuConteudo">
+      <div id="menuConteudo" class="menuConteudo">
 
         <a class="logoMenu" href="../index.html"></a>
         <div class="logoMenuMobile"></div>
@@ -25,24 +25,29 @@
           <ul class="menuLista">
             <li class="listaItem"><a class="menuLink" href="listaInterativa.html"> Lista Interativa</a></li>
             <li class="listaItem"><a class="menuLink" href="formularios.html"> Formularios</a></li>
-            <li class="listaItem"><a class="menuLink" href="galeriaDeImagens.html"> Galeria de Imagem</a></li>
-            <li class="listaItem"><a class="menuLink"> Tabela de Dados</a></li>
-            <li class="listaItem"><a class="menuLink" href="#"> Carrinho de compras</a></li>
-            <li class="listaItem"><a class="menuLink" href="#"> Curriculum</a></li>
+            <li class="listaItem"><a class="menuLink"> Galeria de Imagem</a></li>
+            <li class="listaItem"><a class="menuLink" href="tabelaDeDados.html"> Tabela de Dados</a></li>
+            <li class="listaItem"><a class="menuLink" href="carrinho.html"> Carrinho de compras</a></li>
+            <!-- <li class="listaItem"><a class="menuLink" href="#"> Curriculum</a></li> -->
           </ul>
-          <div class="menuMobileConteudo">
-            <div class="fundoModal">
-              <ul class="menuListaMobile">
-                <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Lista Interativa</a></li>
-                <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Formularios</a></li>
-                <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Galeria de Imagem</a></li>
-                <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Tabela de Dados</a></li>
-                <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Carrinho de compras</a></li>
-                <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Curriculum</a></li>
-              </ul>
-            </div>
-          </div>
         </nav>
+      </div>
+      <div id="modal" style="display: none;">
+        <div class="fundoModal" id="fundoModal"></div>
+        <div id="menuMobileConteudo" class="menuMobileConteudo fechado">
+          <ul class="menuListaMobile ">
+            <li class="listaItemMobile"><a class="menuLinkMobile" href="../index.html"> Home</a></li>
+            <li class="listaItemMobile"><a class="menuLinkMobile" href="listaInterativa.html"> Lista Interativa</a></li>
+            <li class="listaItemMobile"><a class="menuLinkMobile" href="formularios.html"> Formularios</a></li>
+            <li class="listaItemMobile"><a class="menuLinkMobile" href="galeriaDeImagens.html"> Galeria de Imagem</a>
+            </li>
+            <li class="listaItemMobile"><a class="menuLinkMobile" href="tabelaDeDados.html"> Tabela de Dados</a></li>
+            <li class="listaItemMobile"><a class="menuLinkMobile" href="carrinho.html"> Carrinho de compras</a></li>
+            <!-- <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Curriculum</a></li> -->
+            <br />
+            <div id="btnFecharModalMenu">X</div>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -96,8 +101,8 @@
         </div>
         <div class="tabelaAniversariosSecao">
           <h3 class="tituloSecao">Aniversários</h3>
-          <input type="text" class="painelInput" name="novo-nome" id="buscaTabelaAniversarios" placeholder="nome"
-            minlength="3" required>
+          <input type="text" class="painelInput inputFiltro" name="novo-nome" id="buscaTabelaAniversarios"
+            placeholder="nome" minlength="3" required>
 
           <div class="tabelaConteudo">
             <table id="tabelaAniversarios" class="tabelaAniversarios">
@@ -143,6 +148,7 @@
     </div>
   </footer>
 
+  <script src="../scripts/menu.js"></script>
   <script src="../scripts/tabelaDeDados.js"></script>
 </body>
 

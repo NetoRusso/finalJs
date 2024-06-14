@@ -108,7 +108,7 @@
   padding: 5px 10px;
   border: solid 2px var(--cor-lavander);
   /* border-radius: 20px; */
-  font-size: var(--clamp-texto-2);
+  font-size: var(--clamp-texto-3);
   color: var(--cor-lavander);
   text-align: center;
 }
@@ -143,13 +143,21 @@
 }
 
 .celulaConteudo {
-  font-size: var(--clamp-texto-2);
+  font-size: var(--clamp-texto-3);
   color: var(--cor-lavander);
 }
 
 .totalTabela {
   /* margin-top: 32px; */
   padding-top: 16px;
+}
+
+#total {
+  margin-right: 20px;
+}
+
+.botaoCaixa {
+  padding-left: 20px;
 }
 
 .pagarBtn {
@@ -305,5 +313,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .tabelaCarrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .tabelaCarrinhoCorpo tr {
+    max-width: 280px;
+  }
+
+  .botoesTabela {
+    height: auto;
+  }
+
+  .shopCard:hover {
+    scale: none;
   }
 }

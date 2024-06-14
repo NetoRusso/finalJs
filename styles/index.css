@@ -400,3 +400,17 @@
   box-shadow: none;
   transition: all 200ms ease-in-out;
 }
+
+.imagensEmpresaBox {
+  display: flex;
+flex-flow: row wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.imagemEmpresa {
+  width: 300px;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}

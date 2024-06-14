@@ -1,3 +1,6 @@
+console.log("Exercicio 04 OK");
+
+
 const exercicioSecao = document.getElementById("exercicio");
 const exercicioConteudo = document.querySelector(".exercicioConteudo");
 const painelLista = document.querySelector(".painelLista");

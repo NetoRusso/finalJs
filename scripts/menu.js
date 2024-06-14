@@ -1,4 +1,4 @@
-const abrir = document.getElementById("menuConteudo");
+const abrir = document.getElementById("menuConteudoMobile");
 const fechar = document.getElementById("btnFecharModalMenu");
 const fundo = document.getElementById("fundoModal");
 const conteudo = document.getElementById("menuMobileConteudo");

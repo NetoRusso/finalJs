@@ -73,11 +73,41 @@ header {
 /* Mobile */
 .menuListaMobile {
   display: none;
+  width: 100%;
+  height: 75px;
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.listaItemMobile {
+  margin: 16px 0;
+}
+
+
+.menuLinkMobile {
+  font-family: var(--fonte-padrao);
+  font-weight: 600;
+  font-size: var(--clamp-texto-1);
+  color: var(--cor-claro-1);
+  text-decoration: none;
+  pointer-events: all;
+  margin: 16px 0;
 }
 
 .logoMenuMobile {
   display: none;
 }
+
+
+
+
+
+
+
 
 
 /* Roda Pé*/
@@ -154,13 +184,15 @@ header {
 }
 
 
+
 @media (max-width: 1000px) {
   .menuLista {
     display: none;
   }
-  /* .menuListaMobile {
+
+  .menuListaMobile {
     display: block;
-  } */
+  }
 
   .logoMenu {
     display: none;
@@ -177,7 +209,7 @@ header {
     align-self: center;
   }
 
-  .menu{
+  .menu {
     height: 100vh;
   }
 
@@ -199,12 +231,80 @@ header {
 
   .menuMobileConteudo {
     position: fixed;
-    height: 100vh;
-    width: 100%;
-    z-index: 15;
-    /* top: 0; */
-    /* left: 0; */
-    /* background-color: var(--cor-roxo); */
-  }
-}
+    height: 320px;
+    width: 50%;
+    max-width: 360px;
+    background-color: var(--cor-roxo);
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 50px;
+    box-shadow: 0 -5px 10px 5px var(--cor-azul-piscina);
 
+  }
+
+
+  #modal {
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+  }
+
+  .aberto {
+    position: absolute;
+    left: 0;
+    animation: deslisarParaDentro 300ms ease-in-out;
+  }
+
+  .fechado {
+    position: absolute;
+    left: -60vw;
+    animation: deslisarParaFora 300ms ease-in-out;
+  }
+
+  @keyframes deslisarParaDentro {
+    0% {
+      left: -60vw;
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+  @keyframes deslisarParaFora {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -60vw;
+    }
+  }
+
+
+
+  .fundoModal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+
+  }
+
+  #btnFecharModalMenu {
+    width: 48px;
+    aspect-ratio: 1;
+    font-family: var(--fonte-padrao);
+    font-weight: 900;
+    background-color: var(--cor-rosa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-amarelo);
+    border-radius: 50px;
+    bottom: 32px;
+    left: 32px;
+
+  }
+
+}

@@ -1,0 +1,179 @@
+
+.corpoCurriculum{
+  width: 80%;
+  min-width: 320px;
+  min-height: 50vh;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 64px 0 ;
+}
+
+.tituloCurriculum { 
+  width: 100%;
+  margin: 16px auto;
+  font-size: var(--clamp-titulo-1);
+  font-family: var(--fonte-padrao);
+  font-weight: 800;
+  color: var(--cor-roxo);
+  text-align: center;
+}
+
+.subtituloCurriculum2 {
+  width: 100%;
+  margin: 16px auto;
+  font-size: var(--clamp-titulo-2);
+  font-weight: 800;
+  color: var(--cor-escuro-1);
+  text-align: center;
+}
+
+.textoCurriculum {
+  width: 90%;
+  margin: 16px auto;
+  font-size: var(--clamp-texto-1);
+  font-weight: 400;
+  color: var(--cor-escuro-2);
+  text-align: left;
+  line-height: 1.5;
+}
+
+.secao {
+  width: 90%;
+  height: auto;
+  margin: 16px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 8px var(--cor-escuro-1);
+  padding: 10px;
+}
+
+.subtituloCurriculum3 {
+  width: 100%;
+  margin: 16px auto;
+  font-size: var(--clamp-titulo-3);
+  font-family: var(--fonte-padrao);
+  font-weight: 800;
+  color: var(--cor-roxo);
+  text-align: left;
+}
+
+.contact {
+  width: 100%;
+  height: auto;
+}
+
+.linkCurriculum {
+  text-decoration: none;
+  color: var(--cor-roxo);
+  font-size: var(--clamp-titulo-2);
+  margin: 16px;
+  font-weight: 600;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.linkCurriculum:hover {
+  color: var(--cor-rosa);
+}
+
+.iconCurriculum {
+  width:  clamp(1.5rem, 1.1538rem + 1.5385vw, 3rem);
+  aspect-ratio: 1;
+  margin-right: 8px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.iconCurriculum:hover {
+  scale: 1.2;
+}
+.iconCurriculumLinkedin {
+  background-image: url("../assets/img/linkedin.png");
+}
+.iconCurriculumGithub {
+  background-image: url("../assets/img/github.png");
+}
+.iconCurriculumEmail {
+  background-image: url("../assets/img/email.png");
+}
+.iconCurriculumWhatsapp {
+  background-image: url("../assets/img/whatsapp.png");
+}
+
+.skills {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  margin: 16px auto;
+}
+
+.skillItem {
+  width: auto;
+  padding: 5px;
+  font-size: var(--clamp-texto-1);
+  font-weight: 600;
+}
+
+.education,
+.experience {
+  margin: 16px;
+}
+
+.educationItem,
+.experienceItem {
+  margin: 16px;
+}
+
+.educationTitulo,
+.experienceTitulo {
+  font-size: var(--clamp-texto-1);
+  font-family: var(--fonte-padrao);
+  font-weight: 800;
+  color: var(--cor-escuro-1);
+  margin-bottom: 5px;
+}
+
+.educationDetalhe,
+.experienceDetalhe {
+  font-size: var(--clamp-tabela-2);
+  color: var(--cor-smokie);
+  line-height: 1.5;
+}
+
+.educationPeriodo,
+.experiencePeriodo {
+  font-size: var(--clamp-texto-3);
+  color: var(--cor-smokie);
+  line-height: 1.5;
+}
+
+.listaCargo {
+  margin: 8px 0;
+  padding-left: 8px;
+  list-style: none;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 10px;
+}
+
+.certificacao {
+  font-size: var(--clamp-texto-1);
+  font-weight: 600;
+}
+

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Neto Russo">
+  <link rel="shortcut icon" href="../assets/img/escrita.png" type="image/x-png">
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="../styles/rootEReset.css">
+  <link rel="stylesheet" href="../styles/menuEFooter.css">
+  <link rel="stylesheet" href="../styles/bannerPaginas.css">
+  <link rel="stylesheet" href="../styles/carrinho.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="menu">
+      <div id="menuConteudo" class="menuConteudo">
+
+        <a class="logoMenu" href="../index.html"></a>
+        <div class="logoMenuMobile"></div>
+        <nav class="navBar">
+          <ul class="menuLista">
+            <li class="listaItem"><a class="menuLink" href="listaInterativa.html"> Lista Interativa</a></li>
+            <li class="listaItem"><a class="menuLink" href="formularios.html"> Formularios</a></li>
+            <li class="listaItem"><a class="menuLink"> Galeria de Imagem</a></li>
+            <li class="listaItem"><a class="menuLink" href="tabelaDeDados.html"> Tabela de Dados</a></li>
+            <li class="listaItem"><a class="menuLink" href="carrinho.html"> Carrinho de compras</a></li>
+            <!-- <li class="listaItem"><a class="menuLink" href="#"> Curriculum</a></li> -->
+          </ul>
+        </nav>
+      </div>
+      <div id="modal" style="display: none;">
+        <div class="fundoModal" id="fundoModal"></div>
+        <div id="menuMobileConteudo" class="menuMobileConteudo fechado">
+          <ul class="menuListaMobile ">
+            <li class="listaItemMobile"><a class="menuLinkMobile" href="../index.html"> Home</a></li>
+            <li class="listaItemMobile"><a class="menuLinkMobile" href="listaInterativa.html"> Lista Interativa</a></li>
+            <li class="listaItemMobile"><a class="menuLinkMobile" href="formularios.html"> Formularios</a></li>
+            <li class="listaItemMobile"><a class="menuLinkMobile" href="galeriaDeImagens.html"> Galeria de Imagem</a>
+            </li>
+            <li class="listaItemMobile"><a class="menuLinkMobile" href="tabelaDeDados.html"> Tabela de Dados</a></li>
+            <li class="listaItemMobile"><a class="menuLinkMobile" href="carrinho.html"> Carrinho de compras</a></li>
+            <!-- <li class="listaItemMobile"><a class="menuLinkMobile" href="#"> Curriculum</a></li> -->
+            <br />
+            <div id="btnFecharModalMenu">X</div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="banner">
+    <div class="textosBanner">
+      <h2 class="tituloBanner" data-text="05-Carrinho">05-Carrinho</h2>
+      <p class="assinaturaBanner"> By Neto Russo &copy;</p>
+    </div>
+    <video class="videoBanner" loop muted autoplay>
+      <source src="../assets/videos/5374813_Coll_wavebreak_Binary_Binary Codes_1280x720.mp4">
+      O seu navegador não suporta video
+    </video>
+  </div>
+  <main>
+    <section class="esplanacao" aria-label="Exposição do Exercício">
+      <dl class="esplanacaoLista">
+        <dt class="esplanacaoTitulo">Simulador de Carrinho de Compras:</dt>
+        <dt class="esplanacaoSubTitulo">Desafio:</dt>
+        <dd class="esplanacaoItem">Desenvolva um simulador de carrinho de compras onde os usuários possam adicionar
+          itens ao carrinho, alterar quantidades e visualizar o total atualizado em tempo real.</dd>
+        <dt class="esplanacaoSubTitulo">Requisitos:</dt>
+        <dd class="esplanacaoItem">Lista de produtos com botões para adicionar ao carrinho.</dd>
+        <dd class="esplanacaoItem">Visualização do carrinho com a capacidade de alterar quantidades e remover itens.
+        </dd>
+        <dd class="esplanacaoItem">Cálculo dinâmico do total da compra conforme os itens são adicionados ou removidos.
+        </dd>
+        <dd class="esplanacaoItem">Utilize eventos do DOM (como `click`, `input`, `change`) para gerenciar a adição,
+          remoção e atualização de itens no carrinho.
+        </dd>
+      </dl>
+      <hr class="detalheEsplanacao">
+    </section>
+
+    <section class="exercicio" id="exercicio" aria-label="Resolução do Exercício">
+
+      <div class="exercicioConteudo">
+
+        <div class="carrinhoDisplay">
+          <div class="cabecaCarrinho">
+            <h3 class="tituloCarrinho">Seu Pedido:</h3>
+            <img class="carrinhoImg" src="../assets/img/caixa.png" alt="Imagem de caixa">
+          </div>
+          <div id="tabelaCarrinho" class="tabela">
+            <table class="tabelaCarrinho">
+              <thead class="cabecaTabelaCarrinho">
+                <tr class="cabecaTabelaCarrinhoLinha">
+                  <th colspan="2">
+                    Qtd
+                  </th>
+                  <th colspan="6">
+                    Produto
+                  </th>
+                  <th colspan="1">
+                    preço
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody id="tabelaCarrinhoCorpo" class="tabelaCarrinhoCorpo">
+                
+              </tbody>
+              <tfoot class="totalTabela">
+                <tr class="linhaFinal">
+                  <td><br /></td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="celulaConteudo">
+                    Total
+                  </td>
+                  <div class="ordemFinal">
+                    <td colspan="5" id="total" class="celulaConteudo">
+                      R$ 0,00
+                    </td>
+                    <td colspan="1" class="botaoCaixa">
+                      <button type="button" class="pagarBtn" id="pagarBtn">Pagar</button>
+                    </td>
+                  </div>
+
+                </tr>
+              </tfoot>
+
+            </table>
+          </div>
+        </div>
+        <div class="shopDisplay">
+          <h2 class="tituloShop">As melhores Marcas é só aqui!</h2>
+          <div class="shopCards">
+
+            <div class="shopCard">
+              <img class="shopCardImg" src="https://m.media-amazon.com/images/I/8152wfCdW5L._AC_SL1500_.jpg"
+                alt="Imagem de caixa">
+              <div class="shopCardConteudo">
+                <hr class="shopCardDivider">
+                <h3 class="shopCardTitulo">Notebook ASUS TUF Gaming F15.</h3>
+                <p class="shopCardDescricao">Intel Core i7 16 GB 512 GB SSD W11 Home Tela 15.6" FHD Mecha Gray -
+                  FX507VU-LP177W</p>
+                  <div class="shopCardFinal">
+                    <p class="shopCardPreco">R$ 7.649,16</p>
+                    <button id="botaoCard-1" value="1" class="botaoCard">Comprar</button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="shopCard">
+              <img class="shopCardImg" src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/118c37be-e11d-4f92-bc8f-e0c718022dd5.__CR0,0,4042,2500_PT0_SX970_V1___.jpg"
+                alt="Imagem">
+              <div class="shopCardConteudo">
+                <hr class="shopCardDivider">
+                <h3 class="shopCardTitulo">Notebook Gamer Dell G15-i1300-A20P.</h3>
+                <p class="shopCardDescricao">15.6" FHD 13ª Geração Intel Core i5 8GB 512GB SSD NVIDIA RTX 3050 Windows 11</p>
+                  <div class="shopCardFinal">
+                    <p class="shopCardPreco">R$ 5.745,50</p>
+                    <button id="botaoCard-2" value="2" class="botaoCard">Comprar</button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="shopCard">
+              <img class="shopCardImg" src="https://m.media-amazon.com/images/S/aplus-media/vc/b1c04c1e-f3e3-4487-817f-30e6900560c1.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+                alt="Imagem">
+              <div class="shopCardConteudo">
+                <hr class="shopCardDivider">
+                <h3 class="shopCardTitulo">Mochila DELL Gaming</h3>
+                <p class="shopCardDescricao"> Preto, 460-BCZE, 15.6" e 17.3"</p>
+                  <div class="shopCardFinal">
+                    <p class="shopCardPreco">R$ 337,00</p>
+                    <button id="botaoCard-3" value="3" class="botaoCard">Comprar</button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="shopCard">
+              <img class="shopCardImg" src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/f435cf6b-c016-435a-914c-f6ff9460a26e.__CR0,0,2021,1250_PT0_SX970_V1___.jpg"
+                alt="Imagem">
+              <div class="shopCardConteudo">
+                <hr class="shopCardDivider">
+                <h3 class="shopCardTitulo">Dell - KM3322W</h3>
+                <p class="shopCardDescricao"> Teclado e Mouse sem fio, Preto</p>
+                  <div class="shopCardFinal">
+                    <p class="shopCardPreco">R$ 120,00</p>
+                    <button id="botaoCard-4" value="4" class="botaoCard">Comprar</button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="shopCard">
+              <img class="shopCardImg" src="https://m.media-amazon.com/images/I/61ZqTo-kwpL._AC_SL1500_.jpg"
+                alt="Imagem">
+              <div class="shopCardConteudo">
+                <hr class="shopCardDivider">
+                <h3 class="shopCardTitulo">Suporte De Notebook De Alumínio Ajustável</h3>
+                <p class="shopCardDescricao"> 6 Ângulos Ajustável De Alumínio Dobrável E Ergonômico Para Desktop Portátil </p>
+                  <div class="shopCardFinal">
+                    <p class="shopCardPreco">R$ 99,90</p>
+                    <button id="botaoCard-5" value="5" class="botaoCard">Comprar</button>
+                  </div>
+              </div>
+            </div>
+
+            <div class="shopCard">
+              <img class="shopCardImg" src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/a87742e3-f624-4cb8-8e03-f7be799a661b.__CR0,0,970,600_PT0_SX970_V1___.png"
+                alt="Imagem">
+              <div class="shopCardConteudo">
+                <hr class="shopCardDivider">
+                <h3 class="shopCardTitulo">Galaxy Tab S9 FE</h3>
+                <p class="shopCardDescricao"> Grafite, 10.9", Wifi, 128 GB, 6 GB RAM, Câmera Principal 8MP, Câmera Frontal 12 MP UW</p>
+                  <div class="shopCardFinal">
+                    <p class="shopCardPreco">R$ 2.569,90</p>
+                    <button id="botaoCard-6" value="6" class="botaoCard">Comprar</button>
+                  </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+      </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="rodaPe">
+    <div class="assinaturaRodaPe">
+      <p> Pensado, desenhado e desenvolvido por <a title="Curriculum || Neto Russo">Neto Russo</a> &copy || 2024
+      </p>
+    </div>
+    <div class="redesRodaPe">
+      <a href="https://www.instagram.com/neto.russo/" target="_blank" title="instagram || Neto.Russo">
+        <div class="iconRedes instagramRodape"></div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/neto-russo/" target="_blank" title="linkedin || Neto Russo">
+        <div class="iconRedes linkedinRodape"></div>
+      </a>
+
+      <a href="https://www.donutstech.com.br/" target="_blank" title="Donuts Tech">
+        <div class="iconRedes donutsTechRodape"></div>
+      </a>
+    </div>
+  </footer>
+  <script src="../scripts/menu.js"></script>
+
+  <script src="../scripts/carrinho.js"></script>
+</body>
+
+</html>

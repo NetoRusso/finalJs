@@ -231,7 +231,7 @@ header {
 
   .menuMobileConteudo {
     position: fixed;
-    height: 320px;
+    height: 400px;
     width: 50%;
     max-width: 360px;
     background-color: var(--cor-roxo);
@@ -239,6 +239,7 @@ header {
     left: 0;
     border-top-right-radius: 50px;
     box-shadow: 0 -5px 10px 5px var(--cor-azul-piscina);
+    pointer-events: all;
 
   }
 
@@ -293,11 +294,12 @@ header {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
+    pointer-events: none;
 
   }
 
   #btnFecharModalMenu {
-    width: 48px;
+    width: 56px;
     aspect-ratio: 1;
     font-family: var(--fonte-padrao);
     font-weight: 900;
@@ -307,8 +309,7 @@ header {
     justify-content: center;
     color: var(--cor-amarelo);
     border-radius: 50px;
-    bottom: 32px;
-    left: 32px;
+    margin-top: 72px;
 
   }
 

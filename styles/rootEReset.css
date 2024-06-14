@@ -19,6 +19,8 @@
   --clamp-titulo-3: clamp(1rem, 0.8269rem + 0.7692vw, 1.75rem);
 
   --clamp-texto-1: clamp(0.875rem, 0.75rem + 0.625vw, 1.5rem);
+  
+  --clamp-texto-3: clamp(0.625rem, 0.5673rem + 0.2564vw, 0.875rem);
 
   --clamp-texto-tabela: clamp(0.75rem, 0.3929rem + 0.7143vw, 1.25rem);
   --clamp-texto-tabela-2: clamp(0.75rem, 0.5714rem + 0.3571vw, 1rem);

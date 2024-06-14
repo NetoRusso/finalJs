@@ -1,0 +1,309 @@
+.exercicio {
+  /* width: 80%; */
+  min-width: 320px;
+  height: auto;
+  min-height: 100vh;
+}
+
+.exercicioConteudo {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 5%;
+  gap: 5%;
+}
+
+.carrinhoDisplay {
+  width: clamp(20rem, 15.3846rem + 20.5128vw, 40rem);
+  /* min-height: clamp(11.25rem, 8.6538rem + 11.5385vw, 22.5rem); */
+  height: auto;
+  max-width: calc(100vh - 200px);
+  background-color: var(--cor-roxo);
+  border-radius: 20px;
+  box-shadow: -10px 10px 10px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 1;
+  justify-content: space-around;
+  position: relative;
+}
+
+.cabecaCarrinho {
+  width: 90%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+.carrinhoImg {
+  width: clamp(5rem, 3.9904rem + 4.4872vw, 9.375rem);
+  height: auto;
+}
+
+.tituloCarrinho {
+  font-family: var(--fonte-padrao);
+  font-size: var(--clamp-titulo-2);
+  color: var(--cor-lavander);
+}
+
+.tabela {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.tabelaCarrinho {
+  width: 90%;
+  min-width: 300px;
+  height: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: solid 3px var(--cor-smoky);
+  text-align: left;
+}
+
+.tabelaCarrinho tr {
+  max-width: 100%;
+  height: auto;
+}
+
+.tabelaCarrinho td {
+  max-width: 100%;
+  height: auto;
+}
+
+.cabecaTabelaCarrinho {
+  background-color: var(--cor-azul-piscina);
+}
+
+.cabecaTabelaCarrinhoLinha {
+  padding: 10px;
+  border-radius: 20px;
+
+}
+
+.cabecaTabelaCarrinhoLinha th {
+  font-size: var(--clamp-titulo-3);
+  text-align: left;
+  border: solid 3px var(--cor-lavander);
+  padding: 5px 10px;
+  color: var(--cor-lavander);
+}
+
+.tabelaCarrinhoCorpo {
+  margin-top: 32px;
+  border: solid 3px var(--cor-lavander);
+}
+
+.tabelaCarrinhoCorpo td {
+  padding: 5px 10px;
+  border: solid 2px var(--cor-lavander);
+  /* border-radius: 20px; */
+  font-size: var(--clamp-texto-2);
+  color: var(--cor-lavander);
+  text-align: center;
+}
+
+.botoesTabela {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.botaoTabela {
+  width: 32px;
+  height: 32px;
+  background-color: var(--cor-azul-piscina);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cor-lavander);
+  font-size: 24px;
+  font-weight: 900;
+  margin: 2%;
+}
+
+.botaoTabela:hover {
+  cursor: pointer;
+  scale: 0.9;
+}
+
+.botaoDiminuir {
+  background-color: var(--cor-rosa);
+}
+
+.celulaConteudo {
+  font-size: var(--clamp-texto-2);
+  color: var(--cor-lavander);
+}
+
+.totalTabela {
+  /* margin-top: 32px; */
+  padding-top: 16px;
+}
+
+.pagarBtn {
+  width: 100px;
+  padding: 5px 10px;
+  border: 3px solid var(--cor-azul-piscina);
+  border-radius: 10px;
+  background-color: var(--cor-claro-1);
+  box-shadow: -3px 3px 0 0 var(--cor-azul-piscina);
+  font-weight: 600;
+  color: var(--cor-escuro-1);
+  align-self: flex-end;
+}
+
+.pagarBtn:hover {
+  cursor: pointer;
+  scale: 0.95;
+  border: 3px solid var(--cor-azul-piscina);
+  box-shadow: none;
+  transition: all 200ms ease-in-out;
+}
+
+.linhaFinal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: var(--clamp-texto-2);
+  color: var(--cor-lavander);
+}
+
+.shopDisplay {
+  width: 100%;
+  min-height: 50vh;
+  height: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 2%;
+  margin-left: 20px;
+}
+
+.shopCards {
+  width: 60%;
+  min-width: 320px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 32px 0;
+  gap: 32px;
+}
+
+
+.shopCard {
+  width: 300px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-lavander);
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 5px var(--cor-roxo);
+}
+
+.shopCard:hover {
+  cursor: pointer;
+  scale: 0.95;
+  border: 3px solid var(--cor-azul-piscina);
+  box-shadow: none;
+  transition: all 200ms ease-in-out;
+}
+
+.shopCardDivider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--cor-lavander);
+}
+
+.shopCardImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover cover;
+  object-position: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+}
+
+.shopCardConteudo {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 8px
+}
+
+.shopCardTitulo {
+  font-family: var(--fonte-padrao);
+  font-size: 20px;
+  color: var(--cor-escuro-1);
+  margin: 5px;
+}
+
+.shopCardDescricao {
+  color: var(--cor-escuro-1);
+  font-weight: 600;
+}
+
+.shopCardFinal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.shopCardPreco {
+  font-size: 16px;
+  color: var(--cor-azul-piscina);
+  font-weight: 600;
+}
+
+.botaoCard {
+  width: 100px;
+  height: 32px;
+  background-color: var(--cor-azul-piscina);
+  border-radius: 10px;
+  color: var(--cor-lavander);
+  font-size: 16px;
+  font-weight: 600;
+  align-self: flex-end;
+  margin-top: 5px;
+}
+
+.botaoCard:hover {
+  cursor: pointer;
+  scale: 0.90;
+  background-color: var(--cor-roxo);
+  transition: all 200ms ease-in-out;
+}
+
+#tabelaCarrinho {
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .exercicioConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

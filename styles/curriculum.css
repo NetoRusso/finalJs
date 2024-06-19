@@ -101,18 +101,10 @@
 .iconCurriculum:hover {
   scale: 1.2;
 }
-.iconCurriculumLinkedin {
-  background-image: url("../assets/img/linkedin.png");
-}
-.iconCurriculumGithub {
-  background-image: url("../assets/img/github.png");
-}
-.iconCurriculumEmail {
-  background-image: url("../assets/img/email.png");
-}
-.iconCurriculumWhatsapp {
-  background-image: url("../assets/img/whatsapp.png");
-}
+.iconCurriculumLinkedin { background-image: url("../assets/img/linkedin.png");}
+.iconCurriculumGithub { background-image: url("../assets/img/github.png");}
+.iconCurriculumEmail { background-image: url("../assets/img/email.png");}
+.iconCurriculumWhatsapp { background-image: url("../assets/img/whatsapp.png");}
 
 .skills {
   width: 90%;
